@@ -22,8 +22,12 @@ def linreg_plotter(m=2, n=100, e=250):
     y_pred = model.predict(X)
 
     # Ploteado
-    _ = plt.plot(X, y_pred)
-    _ = plt.plot(X, y)
+    _ = plt.plot(X, y, color='orange')
+    _ = plt.plot(X, y_pred, color='blue')
+
+    _ = plt.xlabel("x")
+    _ = plt.ylabel("y")
+    _ = plt.legend(['Valores reales', 'Valores modelados'], loc='lower right')
     plt.show()
 
 
