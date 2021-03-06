@@ -7,7 +7,6 @@ from sklearn.metrics import mean_squared_error
 
 sns.set()
 
-
 def linreg_model(m=2, n=100, e=250):
     """Plotea modelo de regresion lineal con parametros de pendiente m, ruido e y size n"""
 
@@ -75,3 +74,5 @@ def pie_plot(m=2, n=100, e=250):
 
 linreg_plotter()
 pie_plot()
+
+#Commit desde pycharm test
