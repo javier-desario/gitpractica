@@ -71,8 +71,43 @@ def pie_plot(m=2, n=100, e=250):
     _ = plt.title('Residuos generados por Least Squares Method')
     plt.show()
 
+#Obtengo el mse para distintos paramteros del modelo y luego ploteo
+
+def mse_vs_n(m = 2, e = 250):
+    """Devuelve grafica con variacion de mse en fn del n"""
+
+    n_list = [10, 100, 1000, 10000, 100000]
+    mse_list = []
+
+    for n in n_list:
+        x, y, y_pred, data, mse = linreg_model(m, n, e)
+        mse_list.append(mse)
+
+    # Ploteado
+    _ = plt.plot(n_list, mse_list, color='orange')
+    _ = plt.xlabel("n")
+    _ = plt.ylabel("mse")
+    _= plt.title('MSE vs n')
+    plt.show()
+
+def mse_vs_e(m=2, n=100):
+    """Devuelve grafica con variacion de mse en fn del ruido e"""
+
+    e_list = [50, 250, 500, 750, 1000, 2000, 5000]
+    mse_list = []
+
+    for e in e_list:
+        x, y, y_pred, data, mse = linreg_model(m, n, e)
+        mse_list.append(mse)
+
+    # Ploteado
+    _ = plt.plot(e_list, mse_list, color='orange')
+    _ = plt.xlabel("e")
+    _ = plt.ylabel("mse")
+    _ = plt.title('MSE vs e')
+    plt.show()
 
 linreg_plotter()
 pie_plot()
-
-#Commit desde pycharm test
+mse_vs_n()
+mse_vs_e()
