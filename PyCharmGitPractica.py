@@ -109,5 +109,8 @@ def mse_vs_e(m=2, n=100):
 
 linreg_plotter()
 pie_plot()
-mse_vs_n()
-mse_vs_e()
+mse_vs_n(5,1000)
+mse_vs_e(5,500)
+
+#Si aumentamos la pendiente, el MSE disminuye con n!
+#en branch master tenemos la fn called para m = 2.
