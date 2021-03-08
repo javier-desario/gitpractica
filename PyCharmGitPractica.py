@@ -111,3 +111,9 @@ linreg_plotter()
 pie_plot()
 mse_vs_n()
 mse_vs_e()
+
+#Vemos que si cambiamos la m, el comportamiento del MSE vs n cambia
+#no asi MSE vs e
+
+mse_vs_n(5,1000)
+mse_vs_e(5,500)
